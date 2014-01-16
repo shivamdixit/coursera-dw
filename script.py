@@ -13,9 +13,9 @@ section_number=0
 part_number=0
 data_url1 = OrderedDict()
 
-regular_exp = "[A-Z]*[a-z]*\(\d\d*:\d\d*\)</a>"		
+regular_exp = "[A-Z]*[a-z]*\(\d\d*:\d\d*\)</a>"
 ########################################################
-#		   WARNING			       #
+#		   WARNING			                           #
 #It will not select files which don't have time in them#
 ########################################################
 
@@ -39,6 +39,5 @@ for file_full_name,url1 in data_url1.items():
 	    if url2_identifier in line:
 	    	url = line.split("\"")
 	    	url2 = url[3]
-	   	print "Fetching video :" +  file_full_name + "\nPlease wait................................................"
-		subprocess.call(["wget","--output-document", file_full_name,url2])
-
+	   		print "Fetching video :" +  file_full_name + "\nPlease wait................................................"
+			subprocess.call(["wget","--output-document", file_full_name,url2])
